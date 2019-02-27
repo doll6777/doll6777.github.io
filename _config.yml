@@ -44,6 +44,8 @@ nav:
     
     - { ROS2: '/blog/categories/#ros2' }
     - { C++: '/blog/categories/#c' }
+    - { 딥러닝: '/blog/categories/#딥러닝' }
+    - { vision: '/blog/categories/#vision' }
 
   Tags: 
     - '/blog/tags/'

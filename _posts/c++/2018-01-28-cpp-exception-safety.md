@@ -12,7 +12,6 @@ title: C++ 예외 안전성 보장
 excerpt: "Effective C++"
 tags: [c++, programming, effective]
 modified: 2019-01-28
-comments: true
 category : C++
 
 
