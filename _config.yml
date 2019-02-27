@@ -1,9 +1,9 @@
 # Site Info
 title: Code Holic
-tagline: 'snowdeer''s Code Holic'
-description: '매일매일 배워나가는 개발자 snowdeer의 블로그입니다.'
+tagline: 'ran blog'
+description: '매일매일 배워나가는 개발자 ran 블로그입니다.'
 baseurl: ""
-url: https://snowdeer.github.io
+url: https://doll6777.github.io
 logo: '/public/logo.png'
 
 # Site configurations
@@ -26,7 +26,7 @@ version: 1.0
 # About/contact
 author:
   name: snowdeer
-  description: 매일매일 공부하는 snowdeer입니다.
+  description: 매일매일 공부하는 ran.
   contact:
     #linkedin:  https://www.linkedin.com/in/snowdeer
     github:    https://github.com/snowdeer
@@ -41,35 +41,9 @@ nav:
   Categories:
     - '/blog/categories/'
     # - { Categories All: '/blog/categories/' }
-    - { 블로그: '/blog/categories/#블로그' }
-    - { Linux: '/blog/categories/#linux' }
-
-    - { Android: '/blog/categories/#android' }
-    - { Java: '/blog/categories/#java' }
-    - { C++: '/blog/categories/#c' }
-    - { Python: '/blog/categories/#python' }
-    - { Node.js: '/blog/categories/#nodejs' }
-    - { Go: '/blog/categories/#go' }
     
-    - { 알고리즘: '/blog/categories/#알고리즘' }
-    - { Tips: '/blog/categories/#tips' }
-    - { 개발상식: '/blog/categories/#개발상식' }
-    - { Git: '/blog/categories/#git' }
-    - { BlockChain: '/blog/categories/#blockchain' }
-    
-    - { 머신러닝: '/blog/categories/#머신러닝' }
-    - { S/W Architecture: '/blog/categories/#s-w-architecture' }
-    - { 디자인패턴: '/blog/categories/#디자인패턴' }
-    
-    - { Windows: '/blog/categories/#windows' }
-    - { MAC OS: '/blog/categories/#mac-os' }
-    - { 라즈베리파이: '/blog/categories/#라즈베리파이' }
     - { ROS2: '/blog/categories/#ros2' }
 
-    - { Docker: '/blog/categories/#docker' }
-    - { Kubernetes: '/blog/categories/#kubernetes' }
-    - { OpenShift: '/blog/categories/#openshift' }
-    
   Tags: 
     - '/blog/tags/'
 
