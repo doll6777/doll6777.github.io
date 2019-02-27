@@ -43,6 +43,7 @@ nav:
     # - { Categories All: '/blog/categories/' }
     
     - { ROS2: '/blog/categories/#ros2' }
+    - { C++: '/blog/categories/#c' }
 
   Tags: 
     - '/blog/tags/'
