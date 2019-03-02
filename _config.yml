@@ -1,6 +1,6 @@
 # Site Info
 title: Code Holic
-tagline: 'ran blog'
+tagline: 'R A N  B L O G'
 description: '매일매일 배워나가는 개발자 ran 블로그입니다.'
 baseurl: ""
 url: https://doll6777.github.io
@@ -58,9 +58,9 @@ category_page: '/blog/categories/'
 
 hero:
   image: /public/img/hello_page.jpg
-  caption: 안녕하세요. Ran blog 입니다. 
+  caption: RAN BLOG 
 
 # Pugl-In
 mathjax: true
-google_analytics_token: 'UA-112390680-1'
-disqus_short_name: 'snowdeer'
+# google_analytics_token: 'UA-112390680-1'
+# disqus_short_name: 'snowdeer'
