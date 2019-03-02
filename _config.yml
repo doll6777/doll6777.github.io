@@ -25,14 +25,13 @@ version: 1.0
 
 # About/contact
 author:
-  name: snowdeer
+  name: ran
   description: 매일매일 공부하는 ran.
   contact:
     #linkedin:  https://www.linkedin.com/in/snowdeer
-    github:    https://github.com/snowdeer
-    facebook:  https://www.facebook.com/snowdeer.seo
-    #twitter:   https://twitter.com/snowdeer
-    email:     mailto:snowdeer0314@gmail.com
+    github:    https://github.com/doll6777
+    facebook:  https://www.facebook.com/
+    email:     mailto:doll6777@gmail.com
 
 # Navigation (2nd level links supported)
 nav:
@@ -59,7 +58,7 @@ category_page: '/blog/categories/'
 
 hero:
   image: /public/img/hello_page.jpg
-  caption: 안녕하세요. snowdeer's Code Holic입니다. ^^;
+  caption: 안녕하세요. Ran blog 입니다. 
 
 # Pugl-In
 mathjax: true
