@@ -1,7 +1,7 @@
 # Site Info
 title: Code Holic
-tagline: 'RAN  BLOG'
-description: '매일매일 배워나가는 개발자 ran 블로그입니다.'
+tagline: 'ranlog'
+description: 'S/W Develop Blog'
 baseurl: ""
 url: https://doll6777.github.io
 logo: '/public/logo.png'
@@ -26,9 +26,9 @@ version: 1.0
 # About/contact
 author:
   name: ran
-  description: 매일매일 공부하는 ran.
+  description: S/W developer
   contact:
-    #linkedin:  https://www.linkedin.com/in/snowdeer
+    linkedin:  https://www.linkedin.com/in/doll6777
     github:    https://github.com/doll6777
     facebook:  https://www.facebook.com/
     email:     mailto:doll6777@gmail.com
@@ -47,6 +47,7 @@ nav:
     - { vision: '/blog/categories/#vision' }
     - { 안드로이드: '/blog/categories/#안드로이드' }
     - { 디자인패턴: '/blog/categories/#디자인패턴' }
+    - { Kotlin: '/blog/categories/#kotlin' }
 
   Tags: 
     - '/blog/tags/'
