@@ -26,7 +26,10 @@ classification이란 값을 범주로 구별하는 것이다. 이진 분류는 0
 그렇다면 결과값을 1보단 작게, 0보단 크게 변환해야 한다.  
 
 ### sigmoid function
-선형회귀로 나온 값을 sigmoid라는 함수를 한번 더 적용하여 0과 1사이의 값으로 변환한다.
+선형회귀로 나온 값을 sigmoid라는 함수를 한번 더 적용하여 0과 1사이의 값으로 변환한다.  
+이와 같은 함수들을 활성함수라고 하는데 sigmoid, tanh, reLU등이 존재한다.
+
+sigmoid의 단점은 Vanishing Gradient Problem이 생길 수 있다는 것이다. 실수 범위의 수를 [0,1]로 맵핑하기 때문에 매우 넓은 input space 지역이 극도로 작은 범위로 맵핑되어 버리는 문제이다.
 
 ### cost function
 logistic classification의 cost function은 선형 회귀와 같이 표현될까? 실제의 값과 예측값 차이의 제곱의 평균이다.
