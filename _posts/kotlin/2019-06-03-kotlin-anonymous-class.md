@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kotlin - Anonymous function
+title: Kotlin - Anonymous class
 excerpt: "kotlin"
 tags: [kotlin, programming, language]
 permalink: /kotlin/:year/:month/:day/:title/
