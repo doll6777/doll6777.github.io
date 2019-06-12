@@ -21,59 +21,14 @@ CardView를 Recycleview와 함께 사용하는 이유는 일반적으로 리스�
 
 2. fragment 안에 layout으로 들어갈 RecyclerView를 정의 (recycle_fragment_layout.xml)
 <pre class="prettyprint">
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:id="@+id/parent_layout"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:orientation="horizontal">
-
-  <android.support.v7.widget.RecyclerView
-    android:id="@+id/recyclerview"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
-</LinearLayout>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt; &lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:id=&quot;@+id/parent_layout&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot; android:orientation=&quot;horizontal&quot;&gt; &lt;android.support.v7.widget.RecyclerView android:id=&quot;@+id/recyclerview&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot;/&gt; &lt;/LinearLayout&gt;
 </pre>
 
-3. RelativeLayout을 상위 루트로 하는 CardView 레이아웃 파일을 정의한다.  
+1. RelativeLayout을 상위 루트로 하는 CardView 레이아웃 파일을 정의한다.  
 이때 ReleativeLayout으로 감싸지 않으면 cardView의 magrin이 적용되지 않으니 주의하자.  
 
 <pre class="prettyprint">
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:id="@+id/parent_layout"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent">
-
-<android.support.v7.widget.CardView
-  android:id="@+id/cardview"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content"
-  android:layout_margin="5dp"
-  card_view:cardCornerRadius="5dp"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:card_view="http://schemas.android.com/apk/res-auto">
-
-  <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <ImageView
-      android:id="@+id/image"
-      android:layout_width="match_parent"
-      android:layout_height="210dp" />
-
-    <TextView
-      android:id="@+id/title"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:padding="10dp"
-      android:text="test" />
-
-  </LinearLayout>
-</android.support.v7.widget.CardView>
-</RelativeLayout>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt; &lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:id=&quot;@+id/parent_layout&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot;&gt; &lt;android.support.v7.widget.CardView android:id=&quot;@+id/cardview&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;wrap_content&quot; android:layout_margin=&quot;5dp&quot; card_view:cardCornerRadius=&quot;5dp&quot; xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; xmlns:card_view=&quot;http://schemas.android.com/apk/res-auto&quot;&gt; &lt;LinearLayout android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;wrap_content&quot; android:orientation=&quot;vertical&quot;&gt; &lt;ImageView android:id=&quot;@+id/image&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;210dp&quot; /&gt; &lt;TextView android:id=&quot;@+id/title&quot; android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;wrap_content&quot; android:padding=&quot;10dp&quot; android:text=&quot;test&quot; /&gt; &lt;/LinearLayout&gt; &lt;/android.support.v7.widget.CardView&gt; &lt;/RelativeLayout&gt;
 </pre>
 
 1. CardView를 보여줄 Fragment 클래스를 만든다. onCreateView에서 recycle_fragment_layout을 inflate한다. 
