@@ -49,7 +49,8 @@ OpenCV Module의 build.gradle에서 minSdkVersion 항목을 15로  바꿔준다.
 
 7. CMakeList.txt 에서 OpenCV 경로 설정하기  
 
-```
+<pre class="prettyprint">
+
 # For more information about using CMake with Android Studio, read the
 # documentation: https://d.android.com/studio/projects/add-native-code.html
 
@@ -114,4 +115,33 @@ target_link_libraries( # Specifies the target library.
         # included in the NDK.
         ${log-lib} )
 
-```
+</pre>
+
+8. 프로젝트 구조를 보면, MainActivity와 cpp 파일이 생겼을 것이다. 
+
+Java에서는 이런식으로 선언하고,
+<pre class="prettyprint">
+     /**
+     * A native method that is implemented by the 'native-lib' native library,
+     * which is packaged with this application.
+     */
+    public native String stringFromJNI();
+</pre>
+
+Cpp파일에서 정의하여 가져다 사용하면 된다.  
+
+<pre class="prettyprint">
+
+#include <jni.h>
+#include <string>
+
+extern "C" JNIEXPORT jstring JNICALL
+Java_com_example_ihyelan_test_MainActivity_stringFromJNI(
+        JNIEnv *env,
+        jobject /* this */) {
+
+    std::string hello = "Hello from C++";
+    return env->NewStringUTF(hello.c_str());
+}
+</pre>
+
