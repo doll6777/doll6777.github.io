@@ -37,18 +37,15 @@ https://github.com/opencv/opencv/releases 에서 OpenCV zip 파일 다운로드 
 
 
 6. gradle build시 만약 이런 에러가 발생한다면?
-```
+<pre class="prettyprint">
 Manifest merger failed : uses-sdk:minSdkVersion 15 cannot be smaller than version 21 declared in library [:sdk] /Users/ihyelan/AndroidStudioProjects/test/sdk/build/intermediates/merged_manifests/debug/processDebugManifest/merged/AndroidManifest.xml as the library might be using APIs not available in 15
 	Suggestion: use a compatible library with a minSdk of at most 15,
 		or increase this project's minSdk version to at least 21,
-		or use tools:overrideLibrary="org.opencv" to force usage (may lead to runtime failures)     
-```
-
-OpenCV Module의 build.gradle에서 minSdkVersion 항목을 15로  바꿔준다.
-
+		or use tools:overrideLibrary="org.opencv" to force usage (may lead to runtime failures)
+</pre>
+OpenCV Module의 build.gradle에서 minSdkVersion 항목을 15로 바꿔준다.
 
 7. CMakeList.txt 에서 OpenCV 경로 설정하기  
-
 <pre class="prettyprint">
 
 # For more information about using CMake with Android Studio, read the
