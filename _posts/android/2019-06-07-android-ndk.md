@@ -21,19 +21,19 @@ Java와 C/C++ 라이브러리를 연동시켜주는 인터페이스이고, JNI�
 *Android Studio 3.2.1 + Mac에서 작성하였습니다.*
 
 1. C++을 지원하는 안드로이드 프로젝트 생성
-![project](../../assets/2019-06-07-android-ndk/01.png)
+![project](/assets/2019-06-07-android-ndk/01.png)
 
 2. SDK Manager에서 LLDB 설치하기
-![project](../../assets/2019-06-07-android-ndk/02.png)
+![project](/assets/2019-06-07-android-ndk/02.png)
 
 3. OpenCV Module 추가  
 https://github.com/opencv/opencv/releases 에서 OpenCV zip 파일 다운로드 후 원하는 위치에 압축 풀기
 
 4. **File->New->Import Module**에서 OpenCV Module 안의 **sdk** 폴더를 지정  
-![project](../../assets/2019-06-07-android-ndk/03.png)
+![project](/assets/2019-06-07-android-ndk/03.png)
 
 5. File->Project Structure에서 Module Depencency를 설정하기  
-![project](../../assets/2019-06-07-android-ndk/04.png)
+![project](/assets/2019-06-07-android-ndk/04.png)
 
 
 6. gradle build시 만약 이런 에러가 발생한다면?
