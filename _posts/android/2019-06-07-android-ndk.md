@@ -122,7 +122,7 @@ target_link_libraries( # Specifies the target library.
 Java에서는 이런식으로 선언하고,
 <pre class="prettyprint">
      /**
-     * A native method that is implemented by the 'native-lib' native library,
+     * A native method that is implemesnted by the 'native-lib' native library,
      * which is packaged with this application.
      */
     public native String stringFromJNI();
