@@ -14,15 +14,15 @@ category : 안드로이드
 
 아래의 코드는 안드로이드 UI 프로그래밍시 많이 보는 코드이다.
 <pre class="prettyprint">
-findViewById&ltTextView&gt(R.id.sample_text).apply {
+findViewById&lt;TextView&gt;(R.id.sample_text).apply {
     text = viewModel.userName
 }
 </pre>
 
 데이터 바인딩을 사용하면 위의 자바 코드를 부르는것을 생략 가능하다.
 <pre class="prettyprint">
-&ltTextView
-    android:text="@{viewmodel.userName}" /&gt
+&lt;TextView
+    android:text=&quot;@{viewmodel.userName}&quot; /&gt;
 </pre>
 
 ## 데이터 바인딩 사용하기 
