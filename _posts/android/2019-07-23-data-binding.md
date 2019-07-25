@@ -105,5 +105,52 @@ android:text=&quot;@{map[key]}&quot;
         method = "setImageTintList")])
 </pre>
 
+### 양방향 데이터 바인딩
+단방향 데이터 바인딩을 사용하면, 아래와 같이 변경에 반응하는 리스너와 값을 세팅할 수 있다.
+<pre class="prettyprint">
+&lt;CheckBox
+    android:id=&quot;@+id/rememberMeCheckBox&quot;
+    android:checked=&quot;@{viewmodel.rememberMe}&quot;
+    android:onCheckedChanged=&quot;@{viewmodel.rememberMeChanged}&quot;
+/&gt;
+</pre>
 
+양방향 바인딩은 위의 코드를 아래처럼 줄여 준다. @={} 을 사용하여 데이터 변경과 프로퍼티의 변경을 받고 유저의 업데이트를 동시에 받을 수 있다.
+<pre class="prettyprint">
+&lt;CheckBox
+    android:id=&quot;@+id/rememberMeCheckBox&quot;
+    android:checked=&quot;@={viewmodel.rememberMe}&quot;
+/&gt;
+</pre>
+
+### Observable
+데이터의 수정이 일어났을 때 그것을 감지할수 있게 하는 것이다.  
+observable 클래스에는 세가지 타입이 있는데, object, fields, collectios이다.  
+이중 하나의 observable 데이터에 변화가 생기면 UI가 자동으로 업데이트된다.
+
+뒤에서 변하는 변화를 감지하기 위해서 레이아웃 변수에 **Observable** 을 구현하여 사용할 수 있다. 기본적으로 BaseObservable을 쓰고, @Bindable 어노테이션을 쓴다.
+
+<pre class="prettyprint">
+class LoginViewModel : BaseObservable {
+    // val data = ...
+
+    @Bindable
+    fun getRememberMe(): Boolean {
+        return data.rememberMe
+    }
+
+    fun setRememberMe(value: Boolean) {
+        // Avoids infinite loops.
+        if (data.rememberMe != value) {
+            data.rememberMe = value
+
+            // React to the change.
+            saveData()
+
+            // Notify observers of a new value.
+            notifyPropertyChanged(BR.remember_me)
+        }
+    }
+}
+</pre>
 
