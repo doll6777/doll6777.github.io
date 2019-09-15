@@ -51,8 +51,21 @@ category : 딥러닝
 
 
 # 3. TensorFlow Programming
-## Exercise
+## Exercise 1
+TV쇼 '실리콘 밸리'는 'Sea Food'라는 음식을 구분하는 앱을 가지고 있다. 이것을 구현해 보자.
 
+- 이미지 패스를 만든다. 핫도그와 핫도그가 아닌 그림들이 구분되어 있다.
+- 데이터와 미리 학습된 모델을 불러오고, 예측한다
+- 예측을 시각화한다
+
+ 이에대한 코드가 이미 구현되어 있고, 예측된 결과를 가지고 새로운 함수를 구현해본다.  
+예측된 라벨을 가지고 핫도그인지 아닌지를 Boolean값으로 변환하는 함수를 만들어본다.  
+
+![image](/assets/2019-09-15-kaggle-dl-problem/5.png)
+![image](/assets/2019-09-15-kaggle-dl-problem/6.png)
+
+## Exercise 2
+모델의 정확도를 평가하는 함수를 작성하라.  
 
 # 4. Transfer Learning
 # 5. Data Augmentation
