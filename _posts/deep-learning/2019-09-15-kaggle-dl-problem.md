@@ -7,6 +7,8 @@ permalink: /deep-learning/:year/:month/:day/:title/
 category : 딥러닝
 ---
 
+> 본 포스팅은 https://www.kaggle.com/learn/deep-learning 강의를 학습하고 정리하였습니다.
+
 # 1. Intro to DL for Computer Vision
 텐서플로우와 케라스에 대해 설명한다. 텐서플로우는 유명한 딥러닝 툴이고, 케라스는 유명한 딥러닝 모델을 구체화하는 API 또는 인터페이스이다.  
 케라스는 텐서플로우에서 돌아갈 수 잇는 딥러닝 모델을 만들어준다. 
@@ -30,7 +32,28 @@ category : 딥러닝
 다음 강의에서 딥러닝 모델이 다수의 컨볼루션을 합쳐서 복잡한 패턴을 찾아내는 것을 배울것이다.
 
 # 2. Building Models From Convolutions
+한 이미지를 가지고 여러개의 필터를 적용하는것이 가능하다. 이때 여러개의 필터를 한번에 적용하는 과정을 하나의 레이어라고 한다.  
+이 레이어들이 다음 레이어의 컨볼루션으로 변경되어 전달되게 되고, 결국 더 복잡한 패턴들을 찾을 수 있다.  
+
+![image](/assets/2019-09-15-kaggle-dl-problem/3.png)
+
+## Exercise
+캐글에 미리 학습되어 있는 모델을 가지고 이미지를 분류하는 것을 실습해본다. 먼저 이미지를 읽고 전처리를 하는 과정을 거친다.  
+여기서는 ResNet50을 사용한다.  
+
+- tensorflow keras의 load_image를 사용하여 이미지를 불러온다
+- numpy의 array를 사용하여 이미지를 array로 변경, 필요한 전처리 한다
+- keras 라이브러리를 통해 미리 학습된 가중치 파일을 통하여 ResNet50 모델을 생성한다
+- 모델을 사용하여 예측한다
+- decode_predictions를 통하여 결과를 시각화해 본다 (라벨 출력)
+
+![image](/assets/2019-09-15-kaggle-dl-problem/4.png)
+
+
 # 3. TensorFlow Programming
+## Exercise
+
+
 # 4. Transfer Learning
 # 5. Data Augmentation
 # 6. A Deeper Understanding of Deep Learning
