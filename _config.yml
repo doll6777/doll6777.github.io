@@ -49,6 +49,7 @@ nav:
     - { 안드로이드: '/blog/categories/#안드로이드' }
     - { 디자인패턴: '/blog/categories/#디자인패턴' }
     - { Kotlin: '/blog/categories/#Kotlin' }
+    - { 도서: '/blog/categories/#Book' }
 
   Tags: 
     - '/blog/tags/'
