@@ -36,3 +36,24 @@ launch(UI) {
     textView.text = "Cancelled"
 }
 </pre>
+
+# WithContext(NonCancellable)
+try-catch의 finally 블록에서 서스펜딩 함수를 호출하려고 시도하면 실행되고 있는 코루틴이 취소되며 CancellationException이 발생한다. 이때 서스펜딩 함수를 부르고 싶은 경우엔 withContext(NonCancellable) {...} 로 감싸면 호출 가능하다.  
+
+<pre class="prettyprint">
+fun main() = runBlocking {
+val job = launch {
+try {
+repeat(1000) { i ->
+delay(500L)
+}
+} finally {
+withContext(NonCancellable) {
+delay(1000L)
+}
+}
+}
+delay(1300L)
+job.cancelAndJoin()
+}
+</pre>
