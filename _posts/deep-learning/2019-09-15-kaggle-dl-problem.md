@@ -68,7 +68,21 @@ TV쇼 '실리콘 밸리'는 'Sea Food'라는 음식을 구분하는 앱을 가�
 모델의 정확도를 평가하는 함수를 작성하라.  
 
 # 4. Transfer Learning
+지금까지는 미리 학습된 모델을 사용하였다. 이런 경우에는 미리 학습되었던 카테고리별로 분류하는 것이 매우 쉽다.  
+하지만 만약 이런 모델에 새로운 카테고리를 추가하려면 어떻게 해야할까? 만약 이미지를 시골인지, 도시인지 구분하려면 처음부터 학습해야 할까?  
+'Transfer Learning' 은 비교적 적은 데이터를 가지고도 좋은 결과를 낼 수 있도록 해준다.  
+ResNet Model의 경우에는 많은 레이어를 가지고 있는데, 마지막 레이어를 잘라내본다. 그리고 새로 추가할 카테고리 노드들을 마지막 레이어에 추가한다.  
+마지막 레이어와 카테고리 노드들을 모두 연결하고, 소프트맥스를 적용한다. 소프트맥스는 노드를 확률로 반환해준다.  
+
+##Exercise 1
+
 # 5. Data Augmentation
+이미지를 flip하면 도시 이미지가 새로운 도시 이미지가 된다. 따라서 2개의 이미지로 학습할 수 있다.  
+ImageDataGenerator에서 horizontal_flop을 True로 하면 이미지를 여러개로 사용하여 학습시킬 수 있다. 하지만 글자를 학습시키는 경우에는  
+이런 경우가 통하지 않기 때문에, 상황에 따라서 Augmentation을 할지 선택하야 한다. flip 외에도 회전, 이동을 사용할 수 있다.   
+
 # 6. A Deeper Understanding of Deep Learning
+
+
 # 7. Deep Learning From Scratch
 # 8. Dropout and Strides for Larger Models
