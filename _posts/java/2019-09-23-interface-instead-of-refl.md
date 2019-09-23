@@ -27,23 +27,23 @@ public class Main {
 
     public static void main(String[] args)
     {
-        Class<?> cl = null;
+        Class&lt;?&gt; cl = null;
         try {
             cl = Class.forName(args[0]);
         } catch (ClassNotFoundException e) {
-            System.out.println("Class Not found");
+            System.out.println(&quot;Class Not found&quot;);
             System.exit(1);
         }
 
-        Set<String> s = null;
+        Set s = null;
         try {
-          s = (Set<String>) cl.newInstance();
+          s = (Set) cl.newInstance();
         } catch (IllegalAccessException e) {
-            System.err.println("Class not accessible.");
+            System.err.println(&quot;Class not accessible.&quot;);
             System.exit(1);
 
         } catch (InstantiationException e) {
-            System.err.println("Class not instantiable.");
+            System.err.println(&quot;Class not instantiable.&quot;);
             System.exit(1);
         }
 
