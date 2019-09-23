@@ -82,7 +82,12 @@ ImageDataGenerator에서 horizontal_flop을 True로 하면 이미지를 여러�
 이런 경우가 통하지 않기 때문에, 상황에 따라서 Augmentation을 할지 선택하야 한다. flip 외에도 회전, 이동을 사용할 수 있다.   
 
 # 6. A Deeper Understanding of Deep Learning
-
+가중치와 Gradient Descent Algorithm, Loss Function, Back Propagation에 대해서 알아본다. 또한 배치와 에폭 사이즈에 대해서도 알아본다.  
+인풋 레이어 세개와 예측 레이어 2개를 Dense Layer로 연결했을 때, 노드 사이에 가중치가 있다.  이를 forward-propagation을 통해서  
+최종 값을 계산할 수 있다. 이 때 하나의 값으로 추리기 위해서 Softmax 함수를 사용한다. Softmax는 결과값을 확률값으로 변환해 준다.  
+Loss Function은 모델의 예측이 얼마나 좋은지를 평가한다. 실제 값과 예측 값을 인자로 사용하여 Loss값을 구하는데, Loss값이 클수록 예측과 멀어진다는 뜻이다. Gradient Descent Algorithm은 Loss값이 최저가 되는 곳을 찾는 방법이다.  
+Batch Size는 학습할 때 한번에 사용하는 이미지의 양이고, Epoch는 전체 데이터를 학습하는 횟수이다. 
 
 # 7. Deep Learning From Scratch
+
 # 8. Dropout and Strides for Larger Models
