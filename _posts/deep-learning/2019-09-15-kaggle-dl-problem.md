@@ -89,5 +89,10 @@ Loss Function은 모델의 예측이 얼마나 좋은지를 평가한다. 실제
 Batch Size는 학습할 때 한번에 사용하는 이미지의 양이고, Epoch는 전체 데이터를 학습하는 횟수이다. 
 
 # 7. Deep Learning From Scratch
+transfer learning은 모델이 원래 존재하는 경우 사용한다. 하지만 모델을 처음부터 만드는 방법도 필요하다. 예를 들어 MNIST 데이터가 있다고 하자.  
+또한 MNIST for Fashion이라는 저해상도 옷 이미지를 가지고 분류하는 데이터가 있다고 하자.  
+이를 CSV포맷으로 읽을 수 있다. 먼저 이 파일에서 전처리를 하여 픽셀데이터를 0~1 사이로 바꾸는 등의 작업을 한다.  
+그 다음, 모델을 만드는데 레이어를 하나하나씩 추가한다. Conv2D를 사용하여 하나하나씩 추가하고 마지막에 모델에 배치사이즈, 에폭을 설정하여 fit 한다.  
+
 
 # 8. Dropout and Strides for Larger Models
