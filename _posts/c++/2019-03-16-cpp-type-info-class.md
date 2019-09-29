@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 템플릿 메타프로그래밍과 특성정보 클래스
+title: Effective C++, 템플릿 메타프로그래밍과 특성정보 클래스
 tags: [c++, programming, effective]
 category : C++
 ---
@@ -9,8 +9,8 @@ category : C++
 STL은 기본적으로 컨테이너, 반복자, 알고리즘의 템플릿으로 구성되어 있지만 이 외에 유틸리티라고 불리는 템플릿도 가지고 있다. 이들 중 하나가 advance라는 이름의 템플릿인데, 이 템플릿이 하는 일은 지정된 반복자를 지정된 거리만큼 이동시키는 것이다.
 
 <pre class="prettyprint">
-template<typename IterT, typename DistT>
-void advance(IterT&, DistT d);
+template&lt;typename IterT, typename DistT&gt;
+void advance(IterT&amp;, DistT d);
 </pre>
 
 advance는 그냥 iter += d만 하면 될 것 같지만, 사실 이렇게 구현할수 없다.  
@@ -36,14 +36,14 @@ STL 반복자에는 여러 종류가 있다. 반복자가 지원하는 연산에
   - struct random_access_iterator_tag: public bidirectional_iterator_tag {};
 
 <pre class="prettyprint">
-template<typename IterT, typename DistT>
-void advance(Iter& iter, DistT d) 
+template&lt;typename IterT, typename DistT&gt;
+void advance(Iter&amp; iter, DistT d) 
 {
   if (iter가 임의 접근 반복자이다) {
       iter += d;  // 임의 접근 반복자에 대해서는 반복자 산술 연산을 쓴다.
   }
   else {
-      if (d >= 0) { while(d--) ++iter; } // 다른 종류의 반복자에 대해서는 ++ 혹은 -- 연산의 반복 호출을 사용한다.
+      if (d &gt;= 0) { while(d--) ++iter; } // 다른 종류의 반복자에 대해서는 ++ 혹은 -- 연산의 반복 호출을 사용한다.
       else { while (d++) --iter; }
   }
 }
@@ -65,7 +65,7 @@ iterator_trits<IterT> 안에는 IterT 타입 각각에 대해 iterator_category�
 이때 typedef 타입은 해당 태그 구조체에 대응되어야 한다. 
 
 <pre class="prettyprint">
-template < ... >
+template &lt; ... &gt;
 public:
   class iterator {
      public:
@@ -76,7 +76,7 @@ public:
  이 iterator 클래스가 내부에 지닌 중첩 typedef 타입을 따라한 것이 iterator_traits이다.
 
 <pre class="prettyprint">
-template<typename IterT>
+template&lt;typename IterT&gt;
 struct iterator_traits
 </pre>
 
@@ -88,10 +88,10 @@ struct iterator_traits
 3. 지원하고자 하는 타입 관련 정보를 담은 템플릿 및 그 템플릿의 특수화 버전 (예: iterator_traits) 를 제공한다.
 
 <pre class="prettyprint">
-template<typename IterT, typename DistT>
-void advance(IterT& iter, DistT d) 
+template&lt;typename IterT, typename DistT&gt;
+void advance(IterT&amp; iter, DistT d) 
 {
-    if(typeid(typename std::iterator_traits<IterT>::iterator_category) == 
+    if(typeid(typename std::iterator_traits&lt;IterT&gt;::iterator_category) == 
     typeid(std::random_access_iterator_tag))
     ...
 }
@@ -103,26 +103,25 @@ void advance(IterT& iter, DistT d)
 이것을 대신하는 방법은 오버로딩이다. 
 
 <pre class="prettyprint">
-template<typename IterT, typename DistT> 
-void doAdvance(IterT& iter, DistT d, std::random_access_iterator_tag) {
+template&lt;typename IterT, typename DistT&gt; 
+void doAdvance(IterT&amp; iter, DistT d, std::random_access_iterator_tag) {
     iter += d;
 }
 
-template<typename IterT, typename DistT> 
-void doAdvance(IterT& iter, DistT d, std::bidirectional_iterator_tag) {
-    if (d >= 0) { while(d--) ++iter; }
+template&lt;typename IterT, typename DistT&gt; 
+void doAdvance(IterT&amp; iter, DistT d, std::bidirectional_iterator_tag) {
+    if (d &gt;= 0) { while(d--) ++iter; }
     else { while (d++) --iter; }
 }
 
 
-template<typename IterT, typename DistT> 
-void doAdvance(IterT& iter, DistT d, std::input_iterator_tag) {
-    if (d < 0) {
-        throw std::out_of_range("Negative distance");
+template&lt;typename IterT, typename DistT&gt; 
+void doAdvance(IterT&amp; iter, DistT d, std::input_iterator_tag) {
+    if (d &lt; 0) {
+        throw std::out_of_range(&quot;Negative distance&quot;);
     }
     while (d--) ++iter;
 }
-
 </pre>
 
 ## 템플릿 메타 프로그래밍
@@ -135,9 +134,5 @@ TMP에 있는 엄청난 강점 두가지는 다음과 같다.
 - 템플릿 메타프로그램은 C++ 컴파일이 진행되는 동안에 실행되기 때문에, 기존 작업을 런타임 영역에서 컴파일 타임 영역으로 전환할 수 있다. 따라서 일반적으로 프로그램 실행 도중에 잡혀 왔던 몇몇 에러들을 컴파일 도중에 찾을 수 있다.
 
 또한 TMP를 써서 만든 C++ 프로그램이 확실히 모든 면에서 효율적일 여지가 많다. 컴파일 타임에 동작을 다 해 가지고 오기 때문에 실행 코드가 작아지고, 실행 시간도 짭아지며, 메모리도 적게 잡아먹는다. (하지만 컴파일 시간은 길어진다.)
-
-
-
-
 
 출처: Effective C++ 항목 48

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 파일 사이의 의존성을 최대로 줄이자
+title: Effective C++, 파일 사이의 의존성을 최대로 줄이자
 tags: [c++, programming, effective]
 category : C++
 ---
@@ -19,10 +19,9 @@ category : C++
 대응되는 구현 클래스 쪽으로 그 함수 호출을 전달해서 구현 클래스가 
 실제 작업을 수행하게 만들어라
 
-
-```
-#include <string> // 표준라이브러리는 전방선언하지 않는다
-#include <memory>
+<pre class="prettyprint">
+#include &lt;string&gt; // 표준라이브러리는 전방선언하지 않는다
+#include &lt;memory&gt;
 
 class PersonImpl;
 class Date;
@@ -30,16 +29,14 @@ class Address;
 
 class Person {
 public:
-    Person(const std::string& name, const Date& birthday, const Address& addr);
+    Person(const std::string&amp; name, const Date&amp; birthday, const Address&amp; addr);
     std::string name() const;
     std::string birthDate() const;
     std::string address() const;
 private:
-    std::tr1::shared_ptr<PersonImpl> pImpl;
+    std::tr1::shared_ptr&lt;PersonImpl&gt; pImpl;
 };
-
-
-```
+</pre>
 
 이렇게 인터페이스와 구현을 둘로 나누는 열쇠는 정의부에 대한 의존성을 선언부에 대한 의존성으로 바꾸어 놓는 데 있다.
 
@@ -49,24 +46,24 @@ private:
 > 핸들 클래스 방법 대신에 다른 방법을 쓰고 싶다면 Person을 특수 형태의 추상 기본 클래스, 이른 바 **인터페이스 클래스**로 만드는
 방법도 생각해 볼 수 있다.
 
-```
+<pre class="prettyprint">
 class Person {
 public:
     virtual ~Person();
 
-    static std::tr1::shared_ptr<Person> create(const std::string& name, const Date& birthday, const Address& addr);
+    static std::tr1::shared_ptr&lt;Person&gt; create(const std::string&amp; name, const Date&amp; birthday, const Address&amp; addr);
 
     virtual std::string name() const = 0;
     virtual std::string birthDate() const = 0;
     virtual std::string address() const = 0;
 }
-```
+</pre>
 
-```
+<pre class="prettyprint">
 class RealPerson: public Person {
 public:
-    RealPerson(const std::string& name, const Date& birthday,
-    const Address& addr) : theName(name), theBirthDate(birthday), theAddress(addr) {}
+    RealPerson(const std::string&amp; name, const Date&amp; birthday,
+    const Address&amp; addr) : theName(name), theBirthDate(birthday), theAddress(addr) {}
 
     virtual ~RealPerson() {}
 
@@ -79,13 +76,12 @@ private:
     Date theBirthDate;
     Address theAddress;
 }
-```
+</pre>
 
-```
-    std::tr1::shared_ptr<Person> Person::create(const std::string& name, const Date& birthday, const Address& addr) {
-        return std::tr1::shared_ptr<Person>(new RealPerson(name, birthday, addr));
+<pre class="prettyprint">
+    std::tr1::shared_ptr&lt;Person&gt; Person::create(const std::string&amp; name, const Date&amp; birthday, const Address&amp; addr) {
+        return std::tr1::shared_ptr&lt;Person&gt;(new RealPerson(name, birthday, addr));
     }
-```
-
+</pre>
 
 출처 : Effective C++ 항목 31
