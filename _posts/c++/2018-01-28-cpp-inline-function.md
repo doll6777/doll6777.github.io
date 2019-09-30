@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 인라인 함수
+title: Effective C++, 인라인 함수
 tags: [c++, programming, effective]
 category : C++
 ---
@@ -8,14 +8,14 @@ category : C++
 # 인라인 함수
 
 클래스 정의 내부에서 정의된 age는 암시적인 인라인 요청이다.
-```
+<pre class="prettyprint">
 class Person {
 public:
     int age() const { return theAge; }
 private:
     int theAge;
 }
-```
+</pre>
 
 메모리가 제한된 컴퓨터에서는 인라인 코드를 남발했다가
 프로그램 크기가 그 기계에서 쓸 수 있는 공감을 넘어버릴 수도 있다. 페이징 횟수가 늘어나고, 명령어 캐시 적중률이 떨어질 가능성도 높아진다.

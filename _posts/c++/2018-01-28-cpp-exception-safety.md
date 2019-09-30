@@ -1,20 +1,9 @@
 ---
 layout: post
-title: C++ 예외 안전성 보장
+title: Effective C++, C++ 예외 안전성 보장
 tags: [c++, programming, effective]
 category : C++
 ---
-
-
-
-layout: post
-title: C++ 예외 안전성 보장
-excerpt: "Effective C++"
-tags: [c++, programming, effective]
-modified: 2019-01-28
-category : C++
-
-
 
 # C++ 예외 안전성 보장
 
@@ -45,7 +34,5 @@ category : C++
 ```
 예외를 절대로 던지지 않겠다는 보장이다. 약속한 동작은 언제나 끝까지 완수하는 함수라는 뜻이다. 
 ```
-
-
 
 출처 : Effective C++ 항목 29
