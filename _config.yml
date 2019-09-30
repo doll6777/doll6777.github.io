@@ -1,5 +1,5 @@
 # Site Info
-title: Code Holic
+title: Ranlog
 tagline: 'ranlog'
 description: 'S/W Develop Blog'
 baseurl: ""
@@ -28,7 +28,7 @@ author:
   name: ran
   description: S/W developer
   contact:
-    linkedin:  https://www.linkedin.com/in/doll6777
+    linkedin:  https://www.linkedin.com/in/hye-ran-lee-584328109/
     github:    https://github.com/doll6777
     facebook:  https://www.facebook.com/
     email:     mailto:doll6777@gmail.com
@@ -46,6 +46,7 @@ nav:
     - { 딥러닝: '/blog/categories/#딥러닝' }
     - { Java: '/blog/categories/#Java' }
     - { vision: '/blog/categories/#vision' }
+    - { algorithm: '/blog/categories/#algorithm' }
     - { 안드로이드: '/blog/categories/#안드로이드' }
     - { 디자인패턴: '/blog/categories/#디자인패턴' }
     - { Kotlin: '/blog/categories/#Kotlin' }
