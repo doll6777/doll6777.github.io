@@ -61,9 +61,9 @@ nav:
 tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
 
-hero:
-  image: /public/img/hello_page.jpg
-  caption: RAN BLOG 
+# hero:
+#   image: /public/img/hello_page.jpg
+#   caption: RAN BLOG 
 
 # Pugl-In
 mathjax: true
