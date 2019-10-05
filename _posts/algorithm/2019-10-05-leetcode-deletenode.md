@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [LinkedList] Delete Node in a Linked List
+title: (LinkedList) Delete Node in a Linked List
 tags: [algorithm, programming, leetcode]
 category : algorithm
 ---
