@@ -5,6 +5,8 @@ tags: [algorithm, programming, leetcode]
 category : algorithm
 ---
 
+> https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/603/
+
 이전에 풀었던 중간 노드 삭제하기 문제와는 다르게, tail의 삭제가 들어올 수 있기 때문에 주의해야한다. 따라서 삭제하기 전 이전노드와 다음 노드를 기억하고 있어야 한다.  
 또한 가장 앞 노드도 삭제될수 있다. 이 경우에 루트를 다음 노드로 바꿔준다.  
 
