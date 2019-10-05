@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Move Zeros
+title: [Arrays] Move Zeros
 tags: [algorithm, programming, leetcode]
 category : algorithm
 ---
