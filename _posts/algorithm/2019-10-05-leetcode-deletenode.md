@@ -8,7 +8,7 @@ category : algorithm
 > https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/553/
 
 ## Accepted
-<pre>
+<pre class="prettyprint">
 class Solution {
     public void deleteNode(ListNode node) {
         ListNode nextNode = node.next;

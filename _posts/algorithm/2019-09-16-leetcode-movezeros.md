@@ -7,8 +7,10 @@ category : algorithm
 
 > https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/
 
+0인 원소들을 모두 뒤로 보내는 moveZeros를 구현하라. 새로운 메모리를 할당하지 않고 스왑야 한다. 내 접근법의 경우에는 for문을 돌며 0이 아닌것들을 모두 앞으로 swap 하였다.
+
 ## Accepted
-<pre>
+<pre class="prettyprint">
 class Solution {
     public void moveZeroes(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
@@ -61,6 +63,7 @@ With this invariant in-place, it's easy to see that the algorithm will work.
 
 C++
 
+<pre class="prettyprint">
 void moveZeroes(vector<int>& nums) {
     for (int lastNonZeroFoundAt = 0, cur = 0; cur < nums.size(); cur++) {
         if (nums[cur] != 0) {
@@ -68,6 +71,8 @@ void moveZeroes(vector<int>& nums) {
         }
     }
 }
+</pre>
+
 Complexity Analysis
 
 Space Complexity : O(1)O(1). Only constant space is used.
