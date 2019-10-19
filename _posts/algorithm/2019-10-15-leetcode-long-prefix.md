@@ -1,7 +1,6 @@
 ---
 layout: post
-title: (String)  Longest Common Prefix
-Solution
+title: (String)  Longest Common Prefix Solution
 tags: [algorithm, programming, leetcode]
 category : algorithm
 ---
