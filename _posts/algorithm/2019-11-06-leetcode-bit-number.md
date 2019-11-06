@@ -1,11 +1,11 @@
 ---
 layout: post
-title: (Bit)  
+title: (Bit) Number of 1 Bits 
 tags: [algorithm, programming, leetcode]
 category : algorithm
 ---
 
-> https://leetcode.com/problems/number-of-1-bits/
+> <https://leetcode.com/problems/number-of-1-bits/>
 
 주어진 10진수의 수를 2진수로 변환한 뒤, 1의 개수를 찾는 문제이다.  
 2진수로 변환해가며 1을 카운팅 할 수도 있지만, Bit Shifting을 사용하고 싶다.  
@@ -45,7 +45,7 @@ public class Solution {
 하지만 ARITHMETIC SHIFT 연산과 LOGICAL SHIFT 연산의 차이에 대해 안다면 음수에 대한 처리를  
 이렇게 하지 않아도 된다.  
 
-https://stackoverflow.com/questions/2811319/difference-between-and
+<https://stackoverflow.com/questions/2811319/difference-between-and>
 
 위 링크에서 자세히 설명하고 있는데, 
 
