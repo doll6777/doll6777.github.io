@@ -13,7 +13,7 @@ import java.util.Map;
 
 class Solution {
     public int majorityElement(int[] nums) {
-        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        HashMap&lt;Integer, Integer&gt; hashMap = new HashMap&lt;&gt;();
 
         for (int num : nums) {
             if (!hashMap.containsKey(num)) {
@@ -27,8 +27,8 @@ class Solution {
         int maxKey = -1;
         int maxValue = -1;
 
-        for (Map.Entry<Integer, Integer> entry : hashMap.entrySet()) {
-            if(entry.getValue() > maxValue) {
+        for (Map.Entry&lt;Integer, Integer&gt; entry : hashMap.entrySet()) {
+            if(entry.getValue() &gt; maxValue) {
                 maxValue = entry.getValue();
                 maxKey = entry.getKey();
             }
