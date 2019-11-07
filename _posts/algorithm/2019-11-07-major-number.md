@@ -1,6 +1,6 @@
 ---
 layout: post
-title: (Tree) Path Sum 
+title: (Array) Majority Element 
 tags: [algorithm, programming, leetcode]
 category : algorithm
 ---
@@ -65,10 +65,7 @@ public int majorityElement(int[] nums) {
             count--;
         }
     }
-    
-    
     return ele;
-    
-}
+    }
 }
 </pre>
