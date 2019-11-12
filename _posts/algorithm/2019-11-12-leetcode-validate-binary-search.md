@@ -27,26 +27,25 @@ class Solution {
             return true;
         }
 
-        if (upperBound <= node.val) {
+        if (upperBound &lt;= node.val) {
             return false;
-        } else if (lowerBound >= node.val) {
+        } else if (lowerBound &gt;= node.val) {
             return false;
         }
 
-        return isValidBST(node.left, node.val, lowerBound) && isValidBST(node.right, upperBound, node.val);
+        return isValidBST(node.left, node.val, lowerBound) &amp;&amp; isValidBST(node.right, upperBound, node.val);
     }
 
     public boolean isValidBST(TreeNode root) {
         if (root == null) {
             return true;
         }
-        if (root.left == null && root.right == null) {
+        if (root.left == null &amp;&amp; root.right == null) {
             return true;
         }
         return isValidBST(root, Long.MAX_VALUE, Long.MIN_VALUE);
     }
 }
-
 </pre>
 
 MIN, MAX 값 없이 푼 사람의 풀이
@@ -55,25 +54,25 @@ MIN, MAX 값 없이 푼 사람의 풀이
 class Solution {
     public boolean isValidBST(TreeNode root) {
         
-        ArrayList<TreeNode> list = new ArrayList<>();
-        ArrayList<TreeNode> check = new ArrayList<>();
+        ArrayList&lt;TreeNode&gt; list = new ArrayList&lt;&gt;();
+        ArrayList&lt;TreeNode&gt; check = new ArrayList&lt;&gt;();
         boolean valid = true;
         
         check = inorder(root, list);
         
-        for(int i = 0; i < check.size() - 1; i++)
+        for(int i = 0; i &lt; check.size() - 1; i++)
         {
-            if(check.get(i + 1).val <= check.get(i).val)
+            if(check.get(i + 1).val &lt;= check.get(i).val)
                 valid = false;
         }
         
         return valid;
     }
     
-    public ArrayList<TreeNode> inorder(TreeNode root, ArrayList<TreeNode> list)
+    public ArrayList&lt;TreeNode&gt; inorder(TreeNode root, ArrayList&lt;TreeNode&gt; list)
     {
         if(root == null)
-            return new ArrayList<TreeNode>();
+            return new ArrayList&lt;TreeNode&gt;();
         
         inorder(root.left, list);
         list.add(root);
