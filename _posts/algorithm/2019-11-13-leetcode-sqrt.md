@@ -40,8 +40,6 @@ class Solution {
 
 하지만 이는 숫자가 매우 커질경우 타임리밋을 유발한다. 따라서 바이너리 서치를 사용하면 시간복잡도를 줄일 수 있다.
 
-KMP 알고리즘을 사용해서 구현하면 훨씬 빨라진다. KMP 소스는 아래를 참고하면 된다.
-
 <pre class="prettyprint">
 class Solution {
     public int mySqrt(int x) {
