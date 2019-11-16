@@ -1,9 +1,11 @@
 ---
 layout: post
-title: (Array) 
+title: (Array) find Unsorted Subarray
 tags: [algorithm, programming, leetcode]
 category : algorithm
 ---
+
+> <https://leetcode.com/problems/shortest-unsorted-continuous-subarray>
 
 <pre class="prettyprint">
 class Solution {
