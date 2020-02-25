@@ -44,6 +44,7 @@ class ListNode implements Cloneable {
 class ListNode implements Cloneable {
     int val;
     ListNode next;
+    int[] array = {1,2,3};
 
     ListNode(int x) {
         val = x;
@@ -51,19 +52,22 @@ class ListNode implements Cloneable {
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+
+        ListNode object = (ListNode) super.clone();
+        object.array = array.clone();
+        return object;
     }
 }
 </pre>
 
-만약 링크드 리스트이 다음 노드를 가지고 있는 ListNode가 있다고 하고, clone() 을 진행하게 된다면
+만약 array라는 필드를 가지고 있는 ListNode가 있다고 하고, clone() 을 진행하게 된다면
 
 <pre class="prettyprint">
     ListNode clonedNode = (ListNode) node.clone();
 </pre>
 
-clone()의 기본 동작은 shallow copy이기 때문에, next가 새로 생성이 되며 copy되는 것이 아니고, 
-next의 주소값을 저장하며 copy되게 된다.  
+clone()의 기본 동작은 shallow copy이기 때문에, array의 경우에는 새로 생성이 되며 copy되는 것이 아니고, 
+주소값을 저장하며 copy되게 된다.  
 이렇게 된다면 문제점은 다음과 같다.  
 
 <pre class="prettyprint">
