@@ -16,9 +16,6 @@ category : C++
 > 가상 함수 키워드 virtual은 자식 클래스에서 재정의될 수 있음을 명시한다
 
 <pre class="prettyprint">
-#include <iostream>
-using namespace std;
-
 class A
 {
 public:
@@ -33,19 +30,19 @@ public:
 };
 A::A()
 {
-  cout << "A" << endl;
+  cout &lt;&lt; &quot;A&quot; &lt;&lt; endl;
 }
 A::~A()
 {
-  cout << "~A" << endl;
+  cout &lt;&lt; &quot;~A&quot; &lt;&lt; endl;
 }
 B::B()
 {
-  cout << "B"<< endl;
+  cout &lt;&lt; &quot;B&quot;&lt;&lt; endl;
 }
 B::~B()
 {
-  cout << "~B" << endl;
+  cout &lt;&lt; &quot;~B&quot; &lt;&lt; endl;
 }
 int main()
 {
