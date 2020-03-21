@@ -38,8 +38,8 @@ void getB(char* str, string &amp;a, string &amp;b) {
 
     for(int i = 0; i &lt;strlen(str); i++) {
         if(str[i] == '4') {
-            b +=  to_string( 2 );
-            a +=  to_string( 2 );
+            b +=  '2';
+            a +=  '2';
         } else {
             a += str[i];
             b += '0';
