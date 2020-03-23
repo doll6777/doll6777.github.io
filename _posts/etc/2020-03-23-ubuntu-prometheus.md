@@ -45,16 +45,15 @@ sudo apt-get update
 sudo apt-get install grafana
 ```
 
-### 도커로 실행하는 법
-```
-docker run -d -p 3000:3000 grafana/grafana
-```
-
-
 ```
 sudo systemctl daemon-reload
 sudo systemctl start grafana-server
 sudo systemctl enable grafana-server
+```
+
+### 도커로 실행하는 법
+```
+docker run -d -p 3000:3000 grafana/grafana
 ```
 
 ### node-exporter 설치
@@ -64,14 +63,14 @@ sudo systemctl enable grafana-server
 sudo apt install prometheus-node-exporter
 ```
 
+node-exporter를 다시 불러오기 위해 서비스를 다시 실행한다.  
+
 ```
 systemctl reload prometheus.service
 ```
 
 프로메테우스와 그라파나 둘다 localhost의 해당 포트로 브라우저를 통해 접속할 수 있다. grafana는 id와 pw가 초기 admin/admin 이다.  
-
 데이터소스를 연결할 때 프로메테우스를 설정하고 url을 localhost 대신 실제 아이피를 입력해야 한다.  
-
 필요한 데이터들을 대시보드를 만들고 쿼리를 생성하여 시각화 할 수 있다. 쿼리에 node_로 시작하는 메트릭들을 볼 수 있다.  
 
 
