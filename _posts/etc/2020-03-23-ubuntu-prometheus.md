@@ -7,9 +7,6 @@ permalink: /etc/:year/:month/:day/:title/
 category : etc
 ---
 
-https://blog.chann.kr/posts/init-prometheus-grafana/
-
-
 프로메테우스는 시스템 모니터링을 하기 위한 오픈소스다. 기존의 그라파이트와 같은 모니터링 솔루션과는 다르게 Polling 방법을 사용하여 필요한 데이터를 수집한다.  
 
 > https://github.com/prometheus/prometheus
