@@ -1,10 +1,10 @@
 ---
 layout: post
 title: React 페이지를 Github Pages 사용하여 배포하기
-excerpt: "OS"
-tags: [programming, OS]
+excerpt: "web"
+tags: [programming, web]
 permalink: /os/:year/:month/:day/:title/
-category : OS
+category : Web
 ---
 
 ### Github Pages 만들기

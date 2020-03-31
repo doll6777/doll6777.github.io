@@ -51,6 +51,9 @@ nav:
     - { Kotlin: '/blog/categories/#Kotlin' }
     - { Book: '/blog/categories/#Book' }
     - { OS: '/blog/categories/#OS' }
+    - { Web: '/blog/categories/#Web' }
+    - { Etc: '/blog/categories/#Etc' }
+    
 
   Tags: 
     - '/blog/tags/'
