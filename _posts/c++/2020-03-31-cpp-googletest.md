@@ -8,14 +8,17 @@ category : C++
 
 > [GoogleTest Github Link](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)
 ### Why GoogleTest?
+
 구글에서 만든 C++ Testing Framework.  
+
+```
 1. 테스트는 독립적이고 반복할 수 있어야 한다. 다른 테스트의 결과에 따라 결과가 달라지는 테스트는 좋은 테스트가 아니다. 구글테스느는 각각의 테스트를 분리하여 다른 오브젝트로 관리할 수 있도록 도와준다.
 2. 테스트는 잘 구조화되고 테스트하는 코드를 잘 반영해야 한다. 구글테스트는 관련된 테스트를 test suite로 그룹화하여 데이터와 subroutine을 공유할 수 있도록 한다.  
 3. 테스트는 재사용 가능하고 플랫폼 종속되지 않아야 한다. 구글테스트는 다른 OS에서도 돌 수 있도록 한다.  
 4. 테스트가 Fail했을 때 왜 실패했는지를 보고해주기 때문에 버그를 쉽게 찾을 수 있다.  
 5. 테스팅 프레임워크는 테스트 작성자들의 귀찮음을 덜어주고 테스트 자체에 집중할 수 있도록 만들어준다.  
 6. 테스트는 빨라야한다. 구글테스트를 이용해서 shared resource를 테스트간에 재사용 할 수 있고, 한번만 실행되는 set-up/tear-down 메소드도 사용할 수 있다.  
-
+```
 구글테스트는 xUnit 아키텍쳐에 기반하고 있기 때문에 만약 JUnit이나 PyUnit과 익숙하다면 구글테스트에 빨리 익숙해질 수 있을 것이다.
 
 > 환경: Ubuntu 16.04
@@ -32,7 +35,10 @@ $ make install
 </pre>
 
 ### Assertion
-**ASSERT_**
+Fatal assertion (ASSERT_) 는 테스트 실패시 바로 테스트가 중단된다.  
+Nonfatal assertion (EXPECT_) 는 테스트 실패해도 모든 테스트를 실행한다.  
+
+보통은 EXPECT_를 쓰나, 이 테스트가 실해하면 무조건 바로 중단해야 할 경우는 ASSERT_를 쓴다.
 
 
 ### Basic Assertion
