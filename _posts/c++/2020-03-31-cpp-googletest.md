@@ -42,8 +42,8 @@ Nonfatal assertion (EXPECT_) 는 테스트 실패해도 모든 테스트를 실�
 ### Basic Assertion
 Fatal assertion            | Nonfatal assertion         | Verifies
 -------------------------- | -------------------------- | --------------------
-`ASSERT_TRUE(condition);`  | `EXPECT_TRUE(condition);`  | `condition` is true
-`ASSERT_FALSE(condition);` | `EXPECT_FALSE(condition);` | `condition` is false
+ASSERT_TRUE(condition);  | EXPECT_TRUE(condition);  | condition is true
+ASSERT_FALSE(condition); | EXPECT_FALSE(condition); | condition is false
 
 
 ### Binary Comparison
