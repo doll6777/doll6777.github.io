@@ -109,7 +109,7 @@ template &lt;typename E&gt;  // E is the element type.
 class Queue {
  public:
   Queue();
-  void Enqueue(const E& element);
+  void Enqueue(const E&amp; element);
   E* Dequeue();  // Returns NULL if the queue is empty.
   size_t size() const;
   ...
@@ -160,9 +160,8 @@ TEST_F(QueueTest, DequeueWorks) {
 gtest_main과 Link했다면 메인함수를 작성할 필요는 없다. gtest_main을 링크한다면 구글 테스트가 메인 함수 기본 구현을 제공하기 때문이다. 만약 자신만의 메인을 만들고 싶다면 RUN_ALL_TEST()를 리턴하게 해야 한다.
 
 <pre class="prettyprint">
-#include "this/package/foo.h"
-
-#include "gtest/gtest.h"
+#include &quot;this/package/foo.h&quot;
+#include &quot;gtest/gtest.h&quot;
 
 namespace my {
 namespace project {
@@ -201,8 +200,8 @@ class FooTest : public ::testing::Test {
 
 // Tests that the Foo::Bar() method does Abc.
 TEST_F(FooTest, MethodBarDoesAbc) {
-  const std::string input_filepath = "this/package/testdata/myinputfile.dat";
-  const std::string output_filepath = "this/package/testdata/myoutputfile.dat";
+  const std::string input_filepath = &quot;this/package/testdata/myinputfile.dat&quot;;
+  const std::string output_filepath = &quot;this/package/testdata/myoutputfile.dat&quot;;
   Foo f;
   EXPECT_EQ(f.Bar(input_filepath, output_filepath), 0);
 }
@@ -217,7 +216,7 @@ TEST_F(FooTest, DoesXyz) {
 }  // namespace my
 
 int main(int argc, char **argv) {
-  ::testing::InitGoogleTest(&argc, argv);
+  ::testing::InitGoogleTest(&amp;argc, argv);
   return RUN_ALL_TESTS();
 }
 </pre>
