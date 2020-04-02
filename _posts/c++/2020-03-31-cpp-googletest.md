@@ -5,10 +5,9 @@ tags: [c++, programming, effective]
 category : C++
 ---
 
+> [GoogleTest Github Link](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)  
 
-> [GoogleTest Github Link](https://github.com/google/googletest/blob/master/googletest/docs/primer.md)
 ### Why GoogleTest?
-
 구글에서 만든 C++ Testing Framework.  
 
 ```
