@@ -105,7 +105,7 @@ TEST_F(TestFixtureName, TestName) {
 
 ### Example
 <pre class="prettyprint">
-template <typename E>  // E is the element type.
+template &lt;typename E&gt;  // E is the element type.
 class Queue {
  public:
   Queue();
@@ -127,9 +127,9 @@ class QueueTest : public ::testing::Test {
 
   // void TearDown() override {}
 
-  Queue<int> q0_;
-  Queue<int> q1_;
-  Queue<int> q2_;
+  Queue&lt;int&gt; q0_;
+  Queue&lt;int&gt; q1_;
+  Queue&lt;int&gt; q2_;
 };
 </pre>
 
