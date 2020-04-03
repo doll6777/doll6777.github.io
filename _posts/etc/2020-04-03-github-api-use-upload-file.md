@@ -4,7 +4,7 @@ title: Github API 사용하여 파일 업로드하기
 excerpt: "git"
 tags: [programming, git]
 permalink: /os/:year/:month/:day/:title/
-category : git
+category : Etc
 ---
 
 깃허브 API를 사용하면 파일을 업로드하거나 파일조회, 삭제 등 다양한 작업이 가능하다.  
@@ -21,8 +21,9 @@ category : git
 
 Enterprise 기준으로 다음과 같이 사용한다.  
 
-### 
+```
 PUT /repos/:owner/:repo/contents/:path
+```
 
 ### Example
 https://[github 주소]/api/v3/repos/[내 아이디]/[레포지토리 이름]/contents/[생성할 파일 이름]
@@ -36,4 +37,4 @@ curl --request PUT \
   --header 'content-type: application/json' \
   --header 'token_type: bearer' \
   --data '{\n	"message": "my commit message",\n	"content": [base64로 인코딩된 스트링 내용],\n	"commiter": {\n		"name": "Ran",\n		"email":[my email]\n	}\n}'
-<pre>
+</pre>
