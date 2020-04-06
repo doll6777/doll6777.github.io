@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Git Cherry Pick 
+title: Git Cherry Pick(체리픽) 사용법
 excerpt: "git"
 tags: [programming, git]
 permalink: /os/:year/:month/:day/:title/
@@ -29,7 +29,7 @@ cherry pick할 때 conflict가 발생할 수 있다.
 
 충돌을 해결하고 add후 --confinue를 붙여주면 다시 진행된다.  
 <pre class="prettyprint">
-git add <path>
+git add [path]
 git cherry-pick --confinue
 </pre>
 
