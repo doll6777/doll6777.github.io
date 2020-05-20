@@ -4,7 +4,7 @@ title: Forward Proxy와 Reverse Proxy
 excerpt: "network"
 tags: [programming, network]
 permalink: /os/:year/:month/:day/:title/
-category : Network
+category : Etc
 ---
 
 ### Forward Proxy
