@@ -48,6 +48,7 @@ nav:
     - { algorithm: '/blog/categories/#algorithm' }
     - { 안드로이드: '/blog/categories/#안드로이드' }
     - { 디자인패턴: '/blog/categories/#디자인패턴' }
+    - { Network: '/blog/categories/#Network' }
     - { Kotlin: '/blog/categories/#Kotlin' }
     - { Book: '/blog/categories/#Book' }
     - { OS: '/blog/categories/#OS' }
