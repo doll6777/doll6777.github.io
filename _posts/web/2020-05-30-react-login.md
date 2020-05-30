@@ -11,7 +11,7 @@ category : Web
 
 ![google-console](/assets/web/2020-05-30-react-login/001.png)
 
-- yarn add google-react-login
+- yarn add react-google-login
 
 <pre class="prettyprint">
 import React, { Component } from &#x27;react&#x27;
@@ -26,7 +26,7 @@ export default class MyPage extends Component {
     render() {
         return (&#x3C;div&#x3E;
               &#x3C;GoogleLogin
-                clientId=&#x27;805150848511-tc7sghjbdtf4nt39g3ouj2csr1i6ns59.apps.googleusercontent.com&#x27;
+                clientId={myClientID}
                 onSuccess={(res)=&#x3E;{
                     console.log(res);
                 }}
