@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Android ADB로 USB 없이 원격으로 연결하기
-excerpt: "git"
-tags: [git]
+excerpt: "android"
+tags: [android]
 permalink: /etc/:year/:month/:day/:title/
-category : etc
+category : android
 ---
 
 ADB를 Wifi를 사용하여 원격으로 연결하는 방법이다.
