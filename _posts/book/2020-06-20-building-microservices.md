@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 마이크로버시브 아키텍처 구축, Building Microservices (한빛미디어)
+title: 마이크로서비스 아키텍처 구축, Building Microservices (한빛미디어)
 excerpt: "book"
 tags: [book]
 permalink: /etc/:year/:month/:day/:title/
