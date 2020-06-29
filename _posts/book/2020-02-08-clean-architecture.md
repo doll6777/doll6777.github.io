@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 클린 아키텍쳐, Clean Architecture (인사이트)
-excerpt: "git"
-tags: [git]
+excerpt: "book"
+tags: [book]
 permalink: /etc/:year/:month/:day/:title/
 category : Book
 ---

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 객체지향의 사실과 오해 (위키북스)
-excerpt: "git"
-tags: [git]
+excerpt: "book"
+tags: [book]
 permalink: /etc/:year/:month/:day/:title/
 category : Book
 ---
