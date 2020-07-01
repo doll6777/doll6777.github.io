@@ -17,7 +17,7 @@ category : web
 태그를 사용하면 템플릿 리터럴을 함수로 파싱 할 수 있다. 태그 함수의 첫 번째 인수는 문자열 값의 배열을 포함한다.  
 나머지 인수는 표현식과 관련된다. 결국 함수는 조작 된 문자열을 반환 할 수 있다.  
 
-17. What's the output?
+- What's the output?
 <pre class="prettyprint">
 function getPersonInfo(one, two, three) {
   console.log(one);
@@ -31,6 +31,6 @@ const age = 21;
 getPersonInfo`${person} is ${age} years old`;
 </pre>
 
-A: "Lydia" 21 ["", " is ", " years old"]
-*B: ["", " is ", " years old"] "Lydia" 21*
-C: "Lydia" ["", " is ", " years old"] 21
+A: "Lydia" 21 ["", " is ", " years old"]  
+*B: ["", " is ", " years old"] "Lydia" 21*  
+C: "Lydia" ["", " is ", " years old"] 21  
