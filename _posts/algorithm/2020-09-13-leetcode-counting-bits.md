@@ -1,6 +1,6 @@
 ---
 layout: post
-title: (BSearch) Counting Bits
+title: (DP) Counting Bits
 tags: [algorithm, programming, leetcode]
 category : algorithm
 ---
