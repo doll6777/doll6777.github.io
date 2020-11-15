@@ -95,11 +95,11 @@ LongValueAgentCheckerDetectedValue로 파싱해야 할 클래스는
 만약 하위 타입에 받아야 할 정보들이 있다면 기본 클래스 생성자가 디폴트 생성자로 지정되기 때문에 제대로 받을 수 없다. 따라서 JsonCreator 어노테이션을 설정해 주어야 한다. 
 
 <pre class="prettyprint">
-@JsonTypeName("LongValueAgentChecker")
-public class LongValueAgentCheckerDetectedValue extends AgentCheckerDetectedValue<Long> {
+@JsonTypeName(&#x22;LongValueAgentChecker&#x22;)
+public class LongValueAgentCheckerDetectedValue extends AgentCheckerDetectedValue&#x3C;Long&#x3E; {
     
     @JsonCreator
-    public LongValueAgentCheckerDetectedValue(List<DetectedAgent<Long>> value) {
+    public LongValueAgentCheckerDetectedValue(List&#x3C;DetectedAgent&#x3C;Long&#x3E;&#x3E; value) {
         super(value);
     }
 }
