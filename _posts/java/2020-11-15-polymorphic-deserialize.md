@@ -12,7 +12,7 @@ Java에서 Json 형식을 역직렬화 하거나 직렬화 할 때 Jackson 라�
 
 예를 들어, 다음과 같이 agentValue 에 들어가야 할 타입이 바뀌는 것을 볼 수 있다. 이부분을 어떻게 받는쪽에서 쉽게 받을 수 있을까?  
 
-내가 필요한 것은 여러가지 타입의 "CheckerDetectedValue" 를 type s[BooleanValueAgentChecker, LongValueAgentChecker, LongValueAlarmChecker] 에 따라 다른 타입으로 받는것이다.  
+내가 필요한 것은 여러가지 타입의 "CheckerDetectedValue" 를 type[BooleanValueAgentChecker, LongValueAgentChecker, LongValueAlarmChecker] 에 따라 다른 타입으로 받는것이다.  
 
 ```
 "checkerDetectedValue": {
