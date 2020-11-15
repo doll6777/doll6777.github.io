@@ -14,6 +14,8 @@ Java에서 Json 형식을 역직렬화 하거나 직렬화 할 때 Jackson 라�
 
 내가 필요한 것은 여러가지 타입의 "CheckerDetectedValue" 를 type[BooleanValueAgentChecker, LongValueAgentChecker, LongValueAlarmChecker] 에 따라 다른 타입으로 받는것이다.  
 
+### Json Example
+(1)
 ```
 "checkerDetectedValue": {
     "type": "BooleanValueAgentChecker",
@@ -22,7 +24,10 @@ Java에서 Json 형식을 역직렬화 하거나 직렬화 할 때 Jackson 라�
         "agentValue": true}
     ]
 },
+```
 
+(2)
+```
 "checkerDetectedValue": {
     "type": "LongValueAgentChecker",
     "value": [{
@@ -30,13 +35,17 @@ Java에서 Json 형식을 역직렬화 하거나 직렬화 할 때 Jackson 라�
         "agentValue": 1}
     ]
 },
+```
 
+(3)
+```
 "checkerDetectedValue": {
     "type": "LongValueAlarmChecker",
     "value": 1
 },
 ```
 
+### How to deserialize?
 상위 타입 클래스에 작업할 부분은 다음과 같다. jackson의 어노테이션을 사용해야 한다.  
 
 ### @JsonTypeInfo
