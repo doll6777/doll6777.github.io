@@ -41,7 +41,6 @@ nav:
     - '/blog/categories/'
     # - { Categories All: '/blog/categories/' }
     
-    - { ROS2: '/blog/categories/#ros2' }
     - { C++: '/blog/categories/#c' }
     - { 딥러닝: '/blog/categories/#딥러닝' }
     - { Java: '/blog/categories/#Java' }
@@ -53,6 +52,7 @@ nav:
     - { Book: '/blog/categories/#Book' }
     - { OS: '/blog/categories/#OS' }
     - { Web: '/blog/categories/#Web' }
+    - { database: '/blog/categories/#database' }
     - { Etc: '/blog/categories/#Etc' }
     
 
